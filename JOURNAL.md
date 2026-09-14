@@ -6,7 +6,7 @@ Lien vers le résultat fait pas AI:
 https://www.figma.com/make/BBwbxWiZmq9OmtLkLtJHnI/Web-page-design?t=pkLqGVZXwHnnI9tz-20&fullscreen=1
 
 
-5 Question
+5 Questions
 
 1. J'ai fais le dessign de mon site et ma préparation de mes fichiers.
 
