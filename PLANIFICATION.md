@@ -1,7 +1,9 @@
-Justification des choix technologiques :
+# Planification
+
+## Justification des choix technologiques :
 J'ai opté pour une esthétique électronique qui fait penser à un jeu vidéo. Avec les quatre couleurs classiques d'un jeu à quatre joueurs et le style futuriste, c'est le style que je recherchais.
 
-Idées d'animation documentées :
+## Idées d'animation documentées :
 
 Je voudrais, dans la page d'accueil, faire en sorte que le bouton « Me contacter » ait un effet de glitch.
 
