@@ -1,25 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500&display=swap');
+
+@font-face {
+  font-family: 'Bruno Ace SC';
+  src: url('fonts/BrunoAceSC-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anta';
+  src: url('fonts/Anta-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
 body {
+    /* Code de base pour le background, font et couleur */
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Bruno Ace SC', sans-serif;
     color: #ffffff;
     background: #111111;
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
+    left: 0;
     z-index: 10;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 50px;
-    background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.55) 65%,
+        rgba(0, 0, 0, 0) 100%
+    );
 }
 
 .identite h1 {
@@ -28,28 +53,45 @@ header {
 
 .identite p {
     margin: 8px 0 0;
-    color: #cccccc;
+    color: #51E5FF;
 }
 
 nav {
     display: flex;
     gap: 10px;
+    font-family: 'Anta', sans-serif;
 }
 
 nav a {
+    position: relative;
     color: white;
     text-decoration: none;
     padding: 10px 14px;
     border-radius: 5px;
 }
 
+nav a::after {/* Pour faire le over des bouttons en hauts */
+    position: absolute;
+    right: 14px;
+    bottom: -5px;
+    left: 14px;
+    height: 2px;
+    background: #51E5FF;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
 nav a:hover {
-    background: white;
-    color: black;
+    color: #51E5FF;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
 }
 
 main {
-    padding-top: 100px;
+    padding-top: 0;
 }
 
 .container {
@@ -60,7 +102,7 @@ main {
     align-items: center;
     padding: 100px 10%;
     text-align: center;
-    background: #202020;
+    background: #000000;
     border-bottom: 1px solid #444444;
 }
 
@@ -73,15 +115,242 @@ main {
     font-size: 20px;
 }
 
+.projets {
+    align-items: stretch;
+    gap: 48px;
+    text-align: left;
+}
+
+.projets-entete,
+.projets-carres {
+    width: min(100%, 1080px);
+}
+
+.projets-kicker {
+    margin: 0 0 18px;
+    color: #E94F37;
+    font-family: 'Anta', sans-serif;
+    font-size: 14px !important;
+    letter-spacing: 0.18em;
+}
+
+.projets h2 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: clamp(38px, 5.5vw, 72px);
+    line-height: 0.98;
+}
+
+.projets h2 span {
+    color: #E3B505;
+}
+
+.projets-carres {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+}
+
+.projet-carre {
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgba(81, 229, 255, 0.4);
+    background: #050505;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
 .accueil {
+    position: relative;
+    align-items: flex-start;
+    text-align: left;
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("images/background.png") center / cover no-repeat;
 }
 
+.accueil-logo {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: min(180px, 18vw);
+    height: auto;
+}
+
+.accueil-contenu {
+    width: min(760px, 100%);
+}
+
+.accueil-sur-titre,
+.accueil-sous-titre,
+.accueil-description {
+    margin: 0;
+}
+
+.accueil-sur-titre {
+    color: #E3B505;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+}
+
+.accueil-separateur {
+    width: min(100%, 620px);
+    height: 2px;
+    margin: 14px 0 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(81, 229, 255, 0.35) 25%,
+        #51E5FF 50%,
+        rgba(81, 229, 255, 0.35) 75%,
+        transparent
+    );
+    box-shadow: 0 0 8px rgba(81, 229, 255, 0.45);
+}
+
+.accueil h2 {
+    position: relative;
+    margin: 16px 0 8px;
+    color: #FFFFFF;
+    font-size: clamp(56px, 10vw, 120px);
+    line-height: 0.95;
+    animation: glitch-principal 2.8s infinite steps(1);
+}
+
+.accueil h2::before,
+.accueil h2::after {
+    position: absolute;
+    inset: 0;
+    content: attr(data-text);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.accueil h2::before {
+    color: #51E5FF;
+    animation: glitch-cyan 2.8s infinite steps(1);
+}
+
+.accueil h2::after {
+    color: #E94F37;
+    animation: glitch-red 2.8s infinite steps(1);
+}
+
+@keyframes glitch-principal {
+    0%, 78%, 100% {
+        text-shadow: none;
+    }
+
+    80% {
+        text-shadow: 2px 0 #51E5FF, -2px 0 #E94F37;
+    }
+
+    82% {
+        text-shadow: -1px 0 #51E5FF, 3px 0 #E94F37;
+    }
+}
+
+@keyframes glitch-cyan {
+    0%, 79%, 84%, 100% {
+        opacity: 0;
+        transform: translate(0);
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: translate(-4px, 1px);
+        clip-path: inset(18% 0 62% 0);
+    }
+
+    82% {
+        opacity: 0.7;
+        transform: translate(3px, -1px);
+        clip-path: inset(64% 0 16% 0);
+    }
+}
+
+@keyframes glitch-red {
+    0%, 80%, 85%, 100% {
+        opacity: 0;
+        transform: translate(0);
+    }
+
+    81% {
+        opacity: 0.8;
+        transform: translate(4px, -1px);
+        clip-path: inset(42% 0 38% 0);
+    }
+
+    83% {
+        opacity: 0.65;
+        transform: translate(-3px, 1px);
+        clip-path: inset(72% 0 8% 0);
+    }
+}
+
+.accueil-sous-titre {
+    color: #eeeeee;
+    font-size: clamp(20px, 3vw, 30px);
+}
+
+.accent-cyan {
+    color: #51E5FF;
+}
+
+.accent-gold {
+    color: #E3B505;
+}
+
+.accent-red {
+    color: #E94F37;
+}
+
+.accent-green {
+    color: #4ED088;
+}
+
+.accueil-description {
+    max-width: 620px;
+    margin-top: 28px;
+    color: #dddddd;
+    font-family: 'Alexandria', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.accueil-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 13px 22px;
+    border: 1px solid #51E5FF;
+    border-radius: 5px;
+    color: #51E5FF;
+    font-family: 'Anta', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bouton-principal,
+.bouton:hover {
+    background: #51E5FF;
+    color: black;
+}
+
+.bouton-principal:hover {
+    background: white;
+}
+
+.bouton-secondaire {
+    border-color: #51E5FF;
+    color: #51E5FF;
+}
+
 @media (max-width: 800px) {
     header {
-        position: relative;
         flex-direction: column;
         gap: 20px;
         padding: 20px;
@@ -98,5 +367,19 @@ main {
 
     .container h2 {
         font-size: 36px;
+    }
+
+    .projets-carres {
+        grid-template-columns: 1fr;
+    }
+
+    .accueil h2 {
+        font-size: clamp(52px, 16vw, 88px);
+    }
+
+    .accueil-logo {
+        right: 7%;
+        bottom: 4%;
+        width: min(120px, 25vw);
     }
 }

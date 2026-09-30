@@ -11,11 +11,12 @@
     <header>
         <div class="identite">
             <h1>Cédric Sirois-Tanguay</h1>
-            <p>Modifie ce texte selon tes besoins.</p>
+            <p>Texte texte</p>
         </div>
 
         <nav>
-            <a href="#accueil">Accueil</a>
+            <!-- boutton menu-->
+            <a href="#accueil">Accueil</a> 
             <a href="#projets">Projets</a>
             <a href="#competences">Compétences</a>
             <a href="#personnalite">Personnalité</a>
@@ -24,28 +25,51 @@
     </header>
 
     <main>
+        <!-- Contenu Accueil -->
         <section id="accueil" class="container accueil">
-            <div>
-                <h2>Accueil</h2>
-                <p>Bienvenue sur mon portfolio.</p>
+            <div class="accueil-contenu">
+                <p class="accueil-sur-titre">Cédric Sirois-Tanguay - Portfolio 2026</p>
+                <div class="accueil-separateur" aria-hidden="true"></div>
+                <h2 data-text="Portfolio">Portfolio</h2>
+                <p class="accueil-sous-titre"><span class="accent-cyan">Création visuelle</span> - <span class="accent-cyan">installation technique</span></p>
+                <div class="accueil-separateur" aria-hidden="true"></div>
+                <p class="accueil-description">Passionné par le domaine du spectacle, je cherche à mettre à profit mes compétences en <span class="accent-cyan">installation technique</span> et explorer la liaison entre la <span class="accent-gold">musique</span> et la <span class="accent-red">lumière</span> en création visuelle au sein d'un poste de <span class="accent-green">concepteur lumière</span>.</p>
+                <div class="accueil-actions">
+                    <a class="bouton bouton-principal" href="#contact">Me contacter</a>
+                    <a class="bouton bouton-secondaire" href="#projets">Mes projets</a>
+                </div>
+            </div>
+            <img class="accueil-logo" src="images/logo.png" alt="Logo de Cédric Sirois-Tanguay">
+        </section>
+
+        <!-- Contenu projets -->
+        <section id="projets" class="container projets">
+            <div class="projets-entete">
+                <p class="projets-kicker">01 - PROJET</p>
+                <h2>Créations &amp;<br><span>Réalisations</span></h2>
+            </div>
+
+            <div class="projets-carres" aria-label="Quatre projets">
+                <div class="projet-carre"></div>
+                <div class="projet-carre"></div>
+                <div class="projet-carre"></div>
+                <div class="projet-carre"></div>
             </div>
         </section>
 
-        <section id="projets" class="container">
-            <h2>Mes projets</h2>
-            <p>Présente ici tes différents projets.</p>
-        </section>
-
+        <!-- Contenucompétences -->
         <section id="competences" class="container">
             <h2>Mes compétences</h2>
             <p>HTML, CSS, JavaScript et autres compétences.</p>
         </section>
 
+        <!-- Contenu personnalité -->
         <section id="personnalite" class="container">
             <h2>Ma personnalité</h2>
             <p>Présente ici tes qualités et tes intérêts.</p>
         </section>
 
+        <!-- Contenu contact -->
         <section id="contact" class="container">
             <h2>Contact</h2>
             <p>Ajoute ici tes informations de contact.</p>

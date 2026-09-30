@@ -1,0 +1,37 @@
+[
+  {
+    "id": "mysto",
+    "title": "mysto",
+    "description": "Vidéo style générique faite en step motion.",
+    "category": "Vidéo",
+    "year": "2025",
+    "image": "images/photo_mysto.jpg",
+    "link": "" //vidéo yt
+  },
+  {
+    "id": "magic",
+    "title": "Magic en 60 secondes",
+    "description": "Vidéo explicative de style collage qui explique un jeu de carte.",
+    "category": "Vidéo",
+    "year": "2025",
+    "image": "images/photo_magic.png",
+    "link": ""//vidéo yt
+  },
+  {
+    "id": "yeux",
+    "title": "Ouvre tes yeux",
+    "description": "Projet visuelle multimédia, d'une expérience sonnore et visuelle.",
+    "category": "Vidéo immersive",
+    "year": "2026",
+    "image": "images/photo_yeux.png",
+    "link": ""//vidéo yt
+  },{
+    "id": "nous",
+    "title": "Nous",
+    "description": "Vidéoclip de mes amis et moi.",
+    "category": "Vidéo",
+    "year": "2025",
+    "image": "images/photo_nous.png",
+    "link": ""//vidéo yt
+  }
+]
