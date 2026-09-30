@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: #111111;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.identite h1 {
+    margin: 0;
+}
+
+.identite p {
+    margin: 8px 0 0;
+    color: #cccccc;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: white;
+    color: black;
+}
+
+main {
+    padding-top: 100px;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10%;
+    text-align: center;
+    background: #202020;
+    border-bottom: 1px solid #444444;
+}
+
+.container h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+.accueil {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("images/background.png") center / cover no-repeat;
+}
+
+@media (max-width: 800px) {
+    header {
+        position: relative;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding-top: 0;
+    }
+
+    .container h2 {
+        font-size: 36px;
+    }
+}
