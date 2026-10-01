@@ -1,12 +1,13 @@
-[
+[ // Liste des projets
   {
     "id": "mysto",
-    "title": "mysto",
+    "title": "Mysto",
     "description": "Vidéo style générique faite en step motion.",
     "category": "Vidéo",
     "year": "2025",
     "image": "images/photo_mysto.jpg",
-    "link": "" //vidéo yt
+    "link": "",
+    "skills": ["Caméra", "Réalisation", "DaVinci Resolve"]
   },
   {
     "id": "magic",
@@ -15,7 +16,8 @@
     "category": "Vidéo",
     "year": "2025",
     "image": "images/photo_magic.png",
-    "link": ""//vidéo yt
+    "link": "",
+    "skills": ["Caméra", "After effects", "Montage sonnare"]
   },
   {
     "id": "yeux",
@@ -24,14 +26,17 @@
     "category": "Vidéo immersive",
     "year": "2026",
     "image": "images/photo_yeux.png",
-    "link": ""//vidéo yt
-  },{
+    "link": "",
+    "skills": ["Création visuelle", "Création sonore", "Réalisateur"]
+  },
+  {
     "id": "nous",
     "title": "Nous",
     "description": "Vidéoclip de mes amis et moi.",
     "category": "Vidéo",
     "year": "2025",
     "image": "images/photo_nous.png",
-    "link": ""//vidéo yt
+    "link": "",
+    "skills": ["Caméra", "Réalisation", "Direction photo"]
   }
 ]
