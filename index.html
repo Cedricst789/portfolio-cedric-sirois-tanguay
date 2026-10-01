@@ -9,13 +9,19 @@
 
 <body>
     <header>
+        <!-- Menu de navigation -->
         <div class="identite">
             <h1>Cédric Sirois-Tanguay</h1>
             <p>Texte texte</p>
         </div>
 
-        <nav>
-            <!-- boutton menu-->
+        <button class="menu-bouton" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navigation-principale">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navigation-principale">
             <a href="#accueil">Accueil</a> 
             <a href="#projets">Projets</a>
             <a href="#competences">Compétences</a>
@@ -53,24 +59,84 @@
             </div>
         </section>
 
-        <!-- Contenucompétences -->
-        <section id="competences" class="container">
-            <h2>Mes compétences</h2>
-            <p>HTML, CSS, JavaScript et autres compétences.</p>
+        <!-- Contenu competences -->
+        <section id="competences" class="container competences">
+            <div class="competences-entete">
+                <p class="competences-kicker">02- compétences &amp; outils</p>
+                <h2>Outils &amp;<br><span>savoir-faire</span></h2>
+            </div>
+
+            <ul class="competences-liste" aria-label="Compétences et niveau de maîtrise">
+                <li class="competence"><span class="competence-nom">TouchDesigner</span><span class="competence-points competence-points-bleus" aria-label="4 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point vide"></span></span></li>
+                <li class="competence"><span class="competence-nom">Montage vidéo</span><span class="competence-points competence-points-bleus" aria-label="5 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span></span></li>
+                <li class="competence"><span class="competence-nom">Modélisation 3D</span><span class="competence-points competence-points-jaunes" aria-label="3 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point vide"></span><span class="competence-point vide"></span></span></li>
+                <li class="competence"><span class="competence-nom">Suite Adobe</span><span class="competence-points competence-points-bleus" aria-label="4 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point vide"></span></span></li>
+                <li class="competence"><span class="competence-nom">Tournage vidéo</span><span class="competence-points competence-points-bleus" aria-label="5 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span></span></li>
+                <li class="competence"><span class="competence-nom">Conception sonore</span><span class="competence-points competence-points-jaunes" aria-label="3 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point vide"></span><span class="competence-point vide"></span></span></li>
+                <li class="competence"><span class="competence-nom">Animation 2D</span><span class="competence-points competence-points-bleus" aria-label="4 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point vide"></span></span></li>
+                <li class="competence"><span class="competence-nom">Unity</span><span class="competence-points competence-points-jaunes" aria-label="3 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point vide"></span><span class="competence-point vide"></span></span></li>
+                <li class="competence"><span class="competence-nom">HTML/CSS</span><span class="competence-points competence-points-jaunes" aria-label="3 sur 5"><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point"></span><span class="competence-point vide"></span><span class="competence-point vide"></span></span></li>
+            </ul>
+            <div class="competences-separateur" aria-hidden="true"></div>
+            <p class="competences-sous-titre">Intérêts &amp; Domaines</p>
+            <ul class="interets-liste" aria-label="Intérêts et domaines">
+                <li>Design graphique</li>
+                <li>Installation interactive</li>
+                <li>Jeux vidéo</li>
+                <li>Montage vidéo</li>
+                <li>Réalité virtuelle</li>
+                <li>Réalité augmentée</li>
+            </ul>
         </section>
 
         <!-- Contenu personnalité -->
-        <section id="personnalite" class="container">
-            <h2>Ma personnalité</h2>
-            <p>Présente ici tes qualités et tes intérêts.</p>
+        <section id="personnalite" class="container personnalite">
+            <p class="personnalite-kicker">03 - Personnalité</p>
+            <h2 class="personnalite-sous-titre">Philosophie &amp; <span>Personnalité</span></h2>
+            <div class="accueil-separateur personnalite-separateur" aria-hidden="true"></div>
+            <p class="personnalite-phrase">Un éternel <span class="accent-gold">rêveur</span> qui aime les arts et voudrait créer les <span class="accent-cyan">classiques</span> de demain.</p>
+            <div class="accueil-separateur personnalite-separateur" aria-hidden="true"></div>
+            <ul class="personnalite-mots" aria-label="Qualités personnelles">
+                <li class="mot-bleu">Explorateur</li>
+                <li class="mot-jaune">Extraverti</li>
+                <li class="mot-bleu">Intuitif</li>
+                <li class="mot-jaune">Optimiste</li>
+                <li class="mot-bleu">Créatif</li>
+            </ul>
+            <p class="personnalite-conclusion">Curieux de nature, je transforme chaque idée en expérience créative.</p>
         </section>
 
         <!-- Contenu contact -->
-        <section id="contact" class="container">
-            <h2>Contact</h2>
-            <p>Ajoute ici tes informations de contact.</p>
+        <section id="contact" class="container contact">
+            <p class="contact-kicker">04- Contact</p>
+            <h2>Travaillons <span>Ensemble</span></h2>
+            <ul class="contact-boites" aria-label="Coordonnées de contact">
+                <li>
+                    <p class="contact-label">Email</p>
+                    <a class="contact-email" href="mailto:cedric-st@hotmail.com">cedric-st@hotmail.com</a>
+                </li>
+                <li>
+                    <p class="contact-label">Téléphone</p>
+                    <a class="contact-telephone" href="tel:+15145854737">+1 (514) 585 4737</a>
+                </li>
+                <li>
+                    <p class="contact-label">Message</p>
+                    <p class="contact-valeur">Au plaisir d’échanger</p>
+                </li>
+            </ul>
         </section>
     </main>
+    <footer class="site-footer">
+        <p class="footer-copyright">© 2026 - Cédric Sirois-Tanguay</p>
+        <div class="footer-points" aria-label="Palette de couleurs">
+            <span class="footer-point footer-point-bleu"></span>
+            <span class="footer-point footer-point-rouge"></span>
+            <span class="footer-point footer-point-jaune"></span>
+            <span class="footer-point footer-point-mauve"></span>
+            <span class="footer-point footer-point-vert"></span>
+        </div>
+        <p class="footer-label">Technicien multimédia</p>
+    </footer>
     <script src="main.js"></script>
 </body>
 </html>
