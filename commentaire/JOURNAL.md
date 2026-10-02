@@ -18,7 +18,7 @@ https://www.figma.com/make/BBwbxWiZmq9OmtLkLtJHnI/Web-page-design?t=pkLqGVZXwHnn
 
 5. Oui, pour faire le dessign et voir dans quoi je partais avec mes moodboard et inspiration. 
 
-Bloc 2
+## Bloc 2 : intégration et données
 
 Questions:
 1.Qu'est-ce que j'ai accompli depuis le dernier bloc? (Vous pouvez faire référence à vos commits.)
