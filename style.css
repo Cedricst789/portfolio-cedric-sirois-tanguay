@@ -57,7 +57,7 @@ header {
     margin: 8px 0 0;
     color: #51E5FF;
 }
-
+/*pour le menu*/
 nav {
     display: flex;
     gap: 10px;
@@ -164,7 +164,7 @@ main {
     background: #050505;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
-
+/*pour les lignes au dessus des projets*/
 .projet-carre::before {
     position: absolute;
     top: -1px;
@@ -218,7 +218,7 @@ main {
 .projet-contenu {
     padding: 24px;
 }
-
+/*pour les dates des projets*/
 .projet-date {
     margin: 0 0 12px;
     color: #BFC3C7;
@@ -235,7 +235,7 @@ main {
     font-size: clamp(22px, 2.2vw, 32px);
     line-height: 1.1;
 }
-
+/*pour les descriptions des projets*/
 .projet-description {
     margin: 0 0 22px;
     color: #E8E8E8;
@@ -243,10 +243,15 @@ main {
     font-size: 15px !important;
     line-height: 1.6;
 }
-
+/*marge des liens des projets*/
+.projet-lien {
+    margin-bottom: 22px;
+}
+/*pour les compétences des projets*/
 .projet-competences {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
     margin: 0;
     padding: 0;
@@ -314,11 +319,12 @@ main {
     font-family: 'Anta', sans-serif;
     font-size: clamp(20px, 3vw, 30px) !important;
 }
-
+/*pour les intérêts bien les placer*/
 .interets-liste {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    justify-content: center;
     width: min(100%, 1080px);
     margin: 0;
     padding: 0;
@@ -349,7 +355,7 @@ main {
     box-shadow: 0 0 12px rgba(81, 229, 255, 0.55);
     transform: scale(1.06);
 }
-
+/*pour les compétences listées*/
 .competences-liste {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -360,9 +366,9 @@ main {
 }
 
 .competence {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 18px;
     min-height: 76px;
     padding: 18px 20px;
@@ -374,6 +380,7 @@ main {
     font-family: 'Alexandria', sans-serif;
     font-size: 14px;
     line-height: 1.35;
+    text-align: left;
 }
 
 .competence-points {
@@ -421,7 +428,7 @@ main {
     width: min(180px, 18vw);
     height: auto;
 }
-
+/*pour le contenu de l'accueil*/
 .accueil-contenu {
     width: min(760px, 100%);
 }
@@ -557,7 +564,7 @@ main {
 .personnalite {
     gap: 0;
 }
-
+/*pour le contenu de la personnalité*/
 .personnalite-kicker {
     margin: 0 0 18px;
     color: #E94F37;
@@ -620,7 +627,7 @@ main {
     font-size: 16px !important;
     line-height: 1.6;
 }
-
+/*pour le contenu de contact*/
 .contact {
     align-items: center;
     gap: 28px;
@@ -647,6 +654,21 @@ main {
 
 .contact h2 span {
     color: #E94F37;
+}
+/*pour les séparateurs de contact et de la personnalité*/
+.contact-separateur {
+    width: min(100%, 1080px);
+    height: 1px;
+    margin: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(233, 79, 55, 0.35) 25%,
+        #E94F37 50%,
+        rgba(233, 79, 55, 0.35) 75%,
+        transparent
+    );
+    box-shadow: 0 0 8px rgba(233, 79, 55, 0.45);
 }
 
 .contact-boites {
@@ -921,7 +943,9 @@ main {
     }
 
     .accueil h2 {
+        width: 100%;
         font-size: clamp(52px, 16vw, 88px);
+        text-align: center;
     }
 
     .accueil {
