@@ -13,3 +13,10 @@ Dans la section « Compétences et outils », je mettrai un éclairage derrière
 
 Dans la section « Personnalité », je vais faire clignoter les qualités.
 
+# Bloc 2
+
+Finalement c'est le texte Portfolio qui glitch non le bouton.
+
+Aussi le carrousel n'ai pas là, car il manque de compétences 
+
+Tout le reste je veux le faire mais c'est pour la prochaine étape.
