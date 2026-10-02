@@ -12,6 +12,10 @@ function createProjectCard(project) {
                 <p class="projet-date">Posté ${project.year}</p>
                 <h3>${project.title}</h3>
                 <p class="projet-description">${project.description}</p>
+                <!-- Pour les href des bouttons -->
+                <p class="projet-lien">
+                    ${project.link ? `<a class="bouton projet-lien" href="${project.link}" target="_blank" rel="noopener noreferrer">En savoir plus</a>` : ''}
+                </p>
                 <ul class="projet-competences" aria-label="Compétences utilisées">
                     ${project.skills.map((skill) => `<li>${skill}</li>`).join('')}
                 </ul>

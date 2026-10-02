@@ -6,7 +6,7 @@
     "category": "Vidéo",
     "year": "2025",
     "image": "images/photo_mysto.jpg",
-    "link": "",
+    "link": "https://www.youtube.com/watch?v=TTO9d7dQzP0",
     "skills": ["Caméra", "Réalisation", "DaVinci Resolve"]
   },
   {
@@ -16,7 +16,7 @@
     "category": "Vidéo",
     "year": "2025",
     "image": "images/photo_magic.png",
-    "link": "",
+    "link": "https://www.youtube.com/watch?v=YMUlOtc0UKI",
     "skills": ["Caméra", "After effects", "Montage sonnare"]
   },
   {
@@ -26,7 +26,7 @@
     "category": "Vidéo immersive",
     "year": "2026",
     "image": "images/photo_yeux.png",
-    "link": "",
+    "link": "https://www.youtube.com/watch?v=0jpJknjwAMg",
     "skills": ["Création visuelle", "Création sonore", "Réalisateur"]
   },
   {
@@ -36,7 +36,7 @@
     "category": "Vidéo",
     "year": "2025",
     "image": "images/photo_nous.png",
-    "link": "",
+    "link": "https://www.youtube.com/watch?v=wSYE-daz9go",
     "skills": ["Caméra", "Réalisation", "Direction photo"]
   }
 ]
