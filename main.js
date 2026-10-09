@@ -11,7 +11,8 @@ function createProjectCard(project) {
             <div class="projet-contenu">
                 <p class="projet-date">Posté ${project.year}</p>
                 <h3>${project.title}</h3>
-                <p class="projet-description">${project.description}</p>
+                <p class="projet-description${project.expandedDescription ? ' projet-description-courte' : ''}">${project.description}</p>
+                ${project.expandedDescription ? `<p class="projet-description projet-description-longue">${project.expandedDescription}</p>` : ''}
                 <!-- Pour les href des bouttons -->
                 <p class="projet-lien">
                     ${project.link ? `<a class="bouton projet-lien" href="${project.link}" target="_blank" rel="noopener noreferrer">En savoir plus</a>` : ''}

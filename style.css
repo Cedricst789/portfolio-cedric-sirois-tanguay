@@ -16,7 +16,7 @@
   font-style: normal;
   font-display: swap;
 }
-
+/*Variables de mes couleurs*/
 :root {
     --couleur-noir: #000000;
     --couleur-noir-profond: #050505;
@@ -44,8 +44,8 @@ body {
     /* Code de base pour le background, font et couleur */
     margin: 0;
     font-family: 'Bruno Ace SC', sans-serif;
-    color: var(--couleur-blanc);
-    background: var(--couleur-noir-doux);
+    color: #ffffff;
+    background: #111111;
 }
 /*modification du style pour le header*/
 header {
@@ -73,7 +73,7 @@ header {
 /*marge et couleur*/
 .identite p {
     margin: 8px 0 0;
-    color: var(--couleur-cyan);
+    color: #51E5FF;
 }
 /*pour le menu*/
 nav {
@@ -88,7 +88,7 @@ nav {
 /*pour les liens du menu*/
 nav a {
     position: relative;
-    color: var(--couleur-blanc);
+    color: white;
     text-decoration: none;
     padding: 10px 14px;
     border-radius: 5px;
@@ -100,14 +100,14 @@ nav a::after {
     bottom: -5px;
     left: 14px;
     height: 2px;
-    background: var(--couleur-cyan);
+    background: #51E5FF;
     content: "";
     transform: scaleX(0);
     transition: transform 0.2s ease;
 }
 
 nav a:hover {
-    color: var(--couleur-cyan);
+    color: #51E5FF;
 }
 
 nav a:hover::after {
@@ -126,8 +126,8 @@ main {
     align-items: center;
     padding: 100px 10%;
     text-align: center;
-    background: var(--couleur-noir);
-    border-bottom: 1px solid var(--couleur-gris-bordure);
+    background: #000000;
+    border-bottom: 1px solid #444444;
 }
 
 .container h2 {
@@ -152,7 +152,7 @@ main {
 /*pour les projets*/
 .projets-kicker {
     margin: 0 0 18px;
-    color: var(--couleur-rouge);
+    color: #E94F37;
     font-family: 'Anta', sans-serif;
     font-size: 14px !important;
     letter-spacing: 0.18em;
@@ -160,13 +160,13 @@ main {
 
 .projets h2 {
     margin: 0;
-    color: var(--couleur-blanc);
+    color: #FFFFFF;
     font-size: clamp(38px, 5.5vw, 72px);
     line-height: 0.98;
 }
 
 .projets h2 span {
-    color: var(--couleur-jaune);
+    color: #E3B505;
 }
 
 .projets-carres {
@@ -179,8 +179,8 @@ main {
     position: relative;
     z-index: 0;
     min-width: 0;
-    border: 1px solid var(--couleur-gris-bordure);
-    background: var(--couleur-noir-profond);
+    border: 1px solid #444444;
+    background: #050505;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -192,28 +192,7 @@ main {
         0 18px 36px rgba(0, 0, 0, 0.45),
         0 0 18px var(--projet-couleur),
         inset 0 0 0 1px var(--projet-couleur);
-    transform: scale(1.04);
-}
-
-.projet-carre h3,
-.projet-description,
-.projet-competences li {
-    transition: font-size 0.25s ease;
-}
-
-.projet-carre:hover h3,
-.projet-carre:focus-within h3 {
-    font-size: clamp(24px, 2.4vw, 34px);
-}
-
-.projet-carre:hover .projet-description,
-.projet-carre:focus-within .projet-description {
-    font-size: 17px !important;
-}
-
-.projet-carre:hover .projet-competences li,
-.projet-carre:focus-within .projet-competences li {
-    font-size: 13px;
+    transform: scale(1.03);
 }
 /*pour les lignes au dessus des projets*/
 .projet-carre::before {
@@ -244,19 +223,19 @@ main {
 }
 /*Modifier la couleur des projets*/
 .projet-carre:nth-child(1) {
-    --projet-couleur: var(--couleur-cyan);
+    --projet-couleur: #51E5FF;
 }
 
 .projet-carre:nth-child(2) {
-    --projet-couleur: var(--couleur-rouge);
+    --projet-couleur: #E94F37;
 }
 
 .projet-carre:nth-child(3) {
-    --projet-couleur: var(--couleur-jaune);
+    --projet-couleur: #E3B505;
 }
 
 .projet-carre:nth-child(4) {
-    --projet-couleur: var(--couleur-vert);
+    --projet-couleur: #4ED088;
 }
 /*modifier le style des images des projets*/
 .projet-image {
@@ -272,7 +251,7 @@ main {
 /*pour les dates des projets*/
 .projet-date {
     margin: 0 0 12px;
-    color: var(--couleur-gris);
+    color: #BFC3C7;
     font-family: 'Anta', sans-serif;
     font-size: 14px !important;
     letter-spacing: 0.08em;
@@ -289,10 +268,37 @@ main {
 /*pour les descriptions des projets*/
 .projet-description {
     margin: 0 0 22px;
-    color: var(--couleur-blanc-doux);
+    color: #E8E8E8;
     font-family: 'Alexandria', sans-serif;
     font-size: 15px !important;
     line-height: 1.6;
+}
+
+.projet-description-longue {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, margin-bottom 0.35s ease, opacity 0.35s ease;
+}
+
+.projet-carre:hover .projet-description-courte,
+.projet-carre:focus-within .projet-description-courte {
+    display: none;
+}
+
+.projet-carre:hover .projet-description-longue,
+.projet-carre:focus-within .projet-description-longue {
+    max-height: 600px;
+    margin-bottom: 22px;
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .projet-carre,
+    .projet-description-longue {
+        transition: none;
+    }
 }
 /*marge des liens des projets*/
 .projet-lien {
@@ -701,13 +707,6 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .projet-carre,
-    .projet-carre h3,
-    .projet-description,
-    .projet-competences li {
-        transition: none;
-    }
-
     .personnalite-mots li {
         animation: none;
     }
@@ -1004,11 +1003,6 @@ main {
 
     .projets-carres {
         grid-template-columns: 1fr;
-    }
-
-    .projet-carre:hover,
-    .projet-carre:focus-within {
-        transform: scale(1.02);
     }
 
     .projets {
