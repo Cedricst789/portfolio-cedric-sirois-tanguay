@@ -34,7 +34,7 @@
     --couleur-vert: #4ED088;
     --couleur-mauve: #B36BCE;
 }
-
+/*Pour les styles de base*/
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -182,7 +182,47 @@ main {
     border: 1px solid #444444;
     background: #050505;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    opacity: 0;
+    transform: translate(var(--depart-x), var(--depart-y)) rotate(var(--depart-rotation));
+    transition:
+        opacity 0.7s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.25s ease;
+    transition-delay: calc(var(--ordre) * 120ms);
+    will-change: opacity, transform;
+}
+
+.projet-carre:nth-child(1) {
+    --depart-x: -55vw;
+    --depart-y: -45vh;
+    --depart-rotation: -18deg;
+    --ordre: 0;
+}
+
+.projet-carre:nth-child(2) {
+    --depart-x: 55vw;
+    --depart-y: -45vh;
+    --depart-rotation: 18deg;
+    --ordre: 1;
+}
+
+.projet-carre:nth-child(3) {
+    --depart-x: -55vw;
+    --depart-y: 45vh;
+    --depart-rotation: 18deg;
+    --ordre: 2;
+}
+
+.projet-carre:nth-child(4) {
+    --depart-x: 55vw;
+    --depart-y: 45vh;
+    --depart-rotation: -18deg;
+    --ordre: 3;
+}
+
+.projets-carres.projets-visible .projet-carre {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
 }
 
 .projet-carre:hover,
@@ -299,11 +339,137 @@ main {
     .projet-description-longue {
         transition: none;
     }
+
+    .projet-carre {
+        opacity: 1;
+        transform: none;
+        will-change: auto;
+    }
 }
 /*marge des liens des projets*/
 .projet-lien {
     margin-bottom: 22px;
 }
+
+.projet-lien-processus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.projet-lien-processus .bouton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+}
+
+.bouton-processus {
+    appearance: none;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+
+.fenetre-processus[hidden] {
+    display: none;
+}
+
+.fenetre-processus {
+    position: fixed;
+    z-index: 20;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.processus-contenu {
+    position: relative;
+    width: min(900px, 100%);
+    max-height: min(88vh, 900px);
+    padding: 36px clamp(20px, 4vw, 54px);
+    overflow-y: auto;
+    border: 1px solid #51E5FF;
+    background: #111111;
+    box-shadow: 0 0 28px rgba(81, 229, 255, 0.25);
+}
+
+.processus-fermer {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: 0;
+    background: transparent;
+    color: #51E5FF;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.processus-kicker {
+    margin: 0 0 10px;
+    color: #E3B505;
+    font-family: 'Anta', sans-serif;
+    font-size: 14px !important;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.processus-contenu h2 {
+    margin: 0 0 28px;
+    color: #FFFFFF;
+    font-size: clamp(30px, 5vw, 54px);
+}
+
+.processus-etapes {
+    display: grid;
+    gap: 24px;
+}
+
+.processus-etape {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 22px;
+    margin: 0;
+}
+
+.processus-etape:nth-child(even) img {
+    order: 2;
+}
+
+.processus-etape img {
+    display: block;
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    border: 1px solid #444444;
+}
+
+.processus-etape p {
+    margin: 0;
+    color: #E8E8E8;
+    font-family: 'Alexandria', sans-serif;
+    font-size: 15px !important;
+    line-height: 1.6;
+}
+
+@media (max-width: 950px) {
+    .processus-etape {
+        grid-template-columns: 1fr;
+    }
+
+    .processus-etape:nth-child(even) img {
+        order: 0;
+    }
+}
+
 /*pour les compétences des projets*/
 .projet-competences {
     display: flex;
@@ -430,6 +596,64 @@ main {
     min-height: 76px;
     padding: 18px 20px;
     background: transparent;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+    transition-delay: calc(var(--competence-ordre) * 90ms);
+}
+
+.competence:nth-child(1) {
+    --competence-ordre: 0;
+}
+
+.competence:nth-child(2) {
+    --competence-ordre: 1;
+}
+
+.competence:nth-child(3) {
+    --competence-ordre: 2;
+}
+
+.competence:nth-child(4) {
+    --competence-ordre: 3;
+}
+
+.competence:nth-child(5) {
+    --competence-ordre: 4;
+}
+
+.competence:nth-child(6) {
+    --competence-ordre: 5;
+}
+
+.competence:nth-child(7) {
+    --competence-ordre: 6;
+}
+
+.competence:nth-child(8) {
+    --competence-ordre: 7;
+}
+
+.competence:nth-child(9) {
+    --competence-ordre: 8;
+}
+
+.competences-liste.competences-visibles .competence {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.competence-points {
+    transform: scale(0.7);
+    transform-origin: right center;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition-delay: calc((var(--competence-ordre) * 90ms) + 180ms);
+}
+
+.competences-liste.competences-visibles .competence-points {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .competence-nom {
@@ -466,6 +690,41 @@ main {
     background: transparent;
     border: 1px solid currentColor;
     box-shadow: none;
+}
+
+.competence:hover .competence-point:not(.vide),
+.competence:focus-within .competence-point:not(.vide) {
+    animation: competence-point-clignote 0.8s ease-in-out infinite;
+}
+
+.competence:hover .competence-point:nth-child(2),
+.competence:focus-within .competence-point:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.competence:hover .competence-point:nth-child(3),
+.competence:focus-within .competence-point:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.competence:hover .competence-point:nth-child(4),
+.competence:focus-within .competence-point:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.competence:hover .competence-point:nth-child(5),
+.competence:focus-within .competence-point:nth-child(5) {
+    animation-delay: 0.6s;
+}
+/*L'animation des points de compétence*/
+@keyframes competence-point-clignote {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
 }
 
 /*Pour le conteneur de l'accueil et le background*/
@@ -656,6 +915,21 @@ main {
     line-height: 1.08;
 }
 
+.personnalite-phrase.personnalite-visible {
+    clip-path: inset(0 100% 0 0);
+    animation: personnalite-ecriture 3.2s steps(48, end) forwards;
+}
+
+@keyframes personnalite-ecriture {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
 .personnalite-mots {
     display: flex;
     flex-wrap: wrap;
@@ -707,8 +981,33 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .competence .competence-point {
+        animation: none;
+    }
+
+    .competence,
+    .competence-points {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
     .personnalite-mots li {
         animation: none;
+    }
+
+    .personnalite-phrase.personnalite-visible {
+        animation: none;
+        clip-path: none;
+    }
+
+    .contact.contact-visible .contact-kicker,
+    .contact.contact-visible h2,
+    .contact.contact-visible .contact-separateur::after,
+    .contact.contact-visible .contact-boites li {
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 }
 
@@ -737,6 +1036,10 @@ main {
     text-transform: uppercase;
 }
 
+.contact.contact-visible .contact-kicker {
+    animation: contact-apparition 0.6s ease both;
+}
+
 .contact h2 {
     width: min(100%, 1080px);
     margin: 0;
@@ -745,8 +1048,33 @@ main {
     line-height: 0.98;
 }
 
+.contact.contact-visible h2 {
+    animation: contact-apparition 0.7s 0.12s ease both;
+}
+
 .contact h2 span {
     color: #E94F37;
+}
+
+.contact-separateur {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-separateur::after {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: 0;
+    width: 22%;
+    background: #FFFFFF;
+    box-shadow: 0 0 14px 4px #E94F37;
+    content: "";
+    opacity: 0;
+}
+
+.contact.contact-visible .contact-separateur::after {
+    animation: contact-balayage 1.1s 0.55s ease-out both;
 }
 /*pour les séparateurs de contact et de la personnalité*/
 .contact-separateur {
@@ -767,6 +1095,7 @@ main {
 .contact-boites {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
     width: min(100%, 1080px);
     margin: 20px 0 0;
     padding: 0;
@@ -774,14 +1103,84 @@ main {
 }
 
 .contact-boites li {
-    min-height: 150px;
-    padding: 26px 24px;
+    min-height: 0;
+    padding: 14px 12px;
     border: 1px solid #666666;
     background: #222222;
 }
 
+.contact.contact-visible .contact-boites li {
+    animation: contact-boite-apparition 0.65s ease both;
+}
+
+.contact.contact-visible .contact-boites li:nth-child(1) {
+    animation-delay: 0.85s;
+    border-color: #51E5FF;
+    box-shadow: 0 0 8px rgba(81, 229, 255, 0.14);
+}
+
+.contact.contact-visible .contact-boites li:nth-child(2) {
+    animation-delay: 1.05s;
+    border-color: #E94F37;
+    box-shadow: 0 0 8px rgba(233, 79, 55, 0.14);
+}
+
+.contact.contact-visible .contact-boites li:nth-child(3) {
+    animation-delay: 1.25s;
+    border-color: #4ED088;
+    box-shadow: 0 0 8px rgba(78, 208, 136, 0.14);
+}
+
+@keyframes contact-apparition {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contact-balayage {
+    0% {
+        opacity: 0;
+        transform: translateX(-120%);
+    }
+
+    20%, 80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(560%);
+    }
+}
+
+@keyframes contact-boite-apparition {
+    from {
+        opacity: 0.2;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .contact-boites li + li {
-    border-left: 0;
+    border-left: 1px solid #666666;
+}
+
+.contact-boites li:nth-child(2) {
+    border-left-color: #E94F37;
+}
+
+.contact-boites li:nth-child(3) {
+    border-left-color: #4ED088;
 }
 
 .contact-label {
@@ -1020,11 +1419,11 @@ main {
     .contact-boites {
         grid-template-columns: 1fr;
         margin-top: 0;
+        gap: 10px;
     }
 
     .contact-boites li + li {
         border-top: 0;
-        border-left: 1px solid #666666;
     }
 
     .competences-liste {

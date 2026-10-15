@@ -20,3 +20,15 @@ Finalement c'est le texte Portfolio qui glitch non le bouton.
 Aussi le carrousel n'ai pas là, car il manque de compétences 
 
 Tout le reste je veux le faire mais c'est pour la prochaine étape.
+
+# Bloc 3 
+
+Les cartes de projets entrent maintenant depuis les quatre coins de l'écran au moment où la section devient visible pendant le défilement.
+
+Le compétence apparait pendant le défilement.
+
+Le texte s'écrit au défilement de l'écrans.
+
+La section contact s'allume au défilement : le titre apparaît, une lumière traverse le séparateur et les coordonnées arrivent une par une.
+
+Rajout de la page Proccesus créatif.
