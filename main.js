@@ -16,7 +16,7 @@ function createProjectCard(project) {
                 <span class="projet-indicateur" aria-hidden="true"></span>
                 <!-- Pour les href des bouttons -->
                 <p class="projet-lien${project.id === 'mysto' ? ' projet-lien-processus' : ''}">
-                    ${project.link ? `<a class="bouton projet-lien" href="${project.link}" target="_blank" rel="noopener noreferrer">En savoir plus</a>` : ''}
+                    ${project.link ? `<a class="bouton projet-lien" href="${project.link}" target="_blank" rel="noopener noreferrer">Voir le projet</a>` : ''}
                     ${project.id === 'mysto' ? '<button class="bouton bouton-processus" type="button" aria-haspopup="dialog" aria-controls="fenetre-processus">Processus créatif</button>' : ''}
                 </p>
                 <ul class="projet-competences" aria-label="Compétences utilisées">
