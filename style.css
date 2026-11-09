@@ -1447,6 +1447,14 @@ main {
         border-top: 0;
     }
 
+    .contact-boites li:nth-child(2) {
+        border-top: 1px solid #E94F37;
+    }
+
+    .contact-boites li:nth-child(3) {
+        border-top: 1px solid #4ED088;
+    }
+
     .competences-liste {
         grid-template-columns: 1fr;
     }
