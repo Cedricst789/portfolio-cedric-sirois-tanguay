@@ -6,13 +6,14 @@ async function loadProjects() {
 //Pour créer le HTML pour chaque projet
 function createProjectCard(project) {
     return `
-        <article class="projet-carre">
+        <article class="projet-carre projet-${project.id}">
             <img class="projet-image" src="${project.image}" alt="Image du projet ${project.title}">
             <div class="projet-contenu">
                 <p class="projet-date">Posté ${project.year}</p>
                 <h3>${project.title}</h3>
                 <p class="projet-description${project.expandedDescription ? ' projet-description-courte' : ''}">${project.description}</p>
                 ${project.expandedDescription ? `<p class="projet-description projet-description-longue">${project.expandedDescription}</p>` : ''}
+                <span class="projet-indicateur" aria-hidden="true"></span>
                 <!-- Pour les href des bouttons -->
                 <p class="projet-lien${project.id === 'mysto' ? ' projet-lien-processus' : ''}">
                     ${project.link ? `<a class="bouton projet-lien" href="${project.link}" target="_blank" rel="noopener noreferrer">En savoir plus</a>` : ''}

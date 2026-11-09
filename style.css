@@ -285,6 +285,12 @@ main {
     object-fit: cover;
 }
 
+.projet-nous .projet-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+
 .projet-contenu {
     padding: 24px;
 }
@@ -314,6 +320,16 @@ main {
     line-height: 1.6;
 }
 
+.projet-indicateur {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: -4px auto 22px;
+    border-right: 2px solid var(--projet-couleur);
+    border-bottom: 2px solid var(--projet-couleur);
+    transform: rotate(45deg);
+}
+
 .projet-description-longue {
     max-height: 0;
     margin-bottom: 0;
@@ -332,6 +348,11 @@ main {
     max-height: 600px;
     margin-bottom: 22px;
     opacity: 1;
+}
+
+.projet-carre:hover .projet-indicateur,
+.projet-carre:focus-within .projet-indicateur {
+    display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

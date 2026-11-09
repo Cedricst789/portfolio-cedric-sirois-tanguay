@@ -7,7 +7,7 @@
     "category": "Vidéo",
     "year": "2025",
     "image": "images/photo_mysto.png",
-    "link": "https://www.youtube.com/watch?v=TTO9d7dQzP0",
+    "link": "https://www.youtube.com/watch?v=A5GKhhSORo8",
     "skills": ["Caméra", "Réalisation", "DaVinci Resolve"]
   },
   {
@@ -34,13 +34,13 @@
   },
   {
     "id": "nous",
-    "title": "Nous",
-    "description": "Vidéoclip crée dans un cadre oû nous avons du surprendre un professeur.",
-    "expandedDescription": "Vidéoclip crée dans un cadre oû nous avons du surprendre un professeur.<br><br>Il nous avait demander de mettre en pratique tout ce qu'on avait vue au cours de l'année.<br><br>Donc, quoi de mieux que d'essayer de rapper.<br><br>Cédric Sirois-Tanguay<br>Olivier Laliberté<br>Efraim canizalez",
+    "title": "Demo reel",
+    "description": "Demo reel de Cédric Sirois-Tanguay",
+    "expandedDescription": "Demo reel de Cédric Sirois-Tanguay<br><br>Faite avec Davinci Resolve, voici la plus part de mes projets vidéo ou multimédia que j'ai réalisé.",
     "category": "Vidéo",
     "year": "2025",
-    "image": "images/photo_nous.png",
-    "link": "https://www.youtube.com/watch?v=wSYE-daz9go",
-    "skills": ["Caméra", "Réalisation", "Direction photo"]
+    "image": "images/photo_demo.png",
+    "link": "https://www.youtube.com/watch?v=35vkHAhYyXU",
+    "skills": ["Caméra", "Réalisation", "Montage"]
   }
 ]
